@@ -1,7 +1,7 @@
 const messages = {
     empty: {
         username: 'Favor informar um nome de usuário',
-        password: 'Favor cadastrar uma senha de acesso'
+        password: 'Favor informar sua senha de acesso'
     },
     duplicate: {
         username: 'O nome de usuário já está em uso'
