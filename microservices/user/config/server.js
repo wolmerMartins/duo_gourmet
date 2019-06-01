@@ -10,6 +10,6 @@ app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.set('port', process.env.PORT);
+app.set('port', process.env.USER_PORT);
 
 module.exports = app;

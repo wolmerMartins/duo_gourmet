@@ -24,7 +24,7 @@ const UserController = {
             if (!user) return res.status(404).json({ error: messages.notFound.user });
 
             let passOk = await bcrypt.compare(password, user.password);
-            if (!passOk) return res.status(401).json({ error: messages.error.unauth });
+            if (!passOk) return res.status(401).json({ error: messages.unauth });
 
             return res.status(200).json({ id: user._id, token: createToken(user._id) });
         } catch(err) {

@@ -9,6 +9,7 @@ const messages = {
     notFound: {
         user: 'O usuário não está cadastrado'
     },
+    createUserError: 'Erro ao criar usuário',
     serverError: 'Ocorreu um erro inesperado, tente novamente',
     unauth: 'Usuário ou senha incorreta'
 }
