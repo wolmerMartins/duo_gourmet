@@ -1,0 +1,28 @@
+{
+  "name": "gateway",
+  "version": "1.0.0",
+  "description": "Duo Gourmet back end test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/wolmerMartins/duo_gourmet.git"
+  },
+  "author": "Wolmer Martins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wolmerMartins/duo_gourmet/issues"
+  },
+  "homepage": "https://github.com/wolmerMartins/duo_gourmet#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.5.1",
+    "helmet": "^3.18.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1"
+  }
+}
