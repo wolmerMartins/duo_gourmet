@@ -10,6 +10,7 @@ const options = {
 
 mongoose.connect(process.env.DB_CONNECTION, options);
 mongoose.set('useCreateIndex', true);
+mongoose.set('useFindAndModify', false);
 
 mongoose.connection.on('error', err => {
     console.log('An error has occurred trying to connect database!');

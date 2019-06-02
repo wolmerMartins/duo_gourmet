@@ -18,7 +18,9 @@ app.post('/users/create', userProxy);
 app.post('/users/auth', userProxy);
 
 app.get('/restaurantes', restaurantProxy);
+app.get('/restaurantes/:id', restaurantProxy);
 app.post('/restaurantes', restaurantProxy);
+app.post('/restaurantes/:id', restaurantProxy);
 
 app.get('/historico', serviceProxy);
 app.get('/historico/:userId', serviceProxy);
