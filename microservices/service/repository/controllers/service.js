@@ -80,7 +80,7 @@ const ServiceController = {
     },
     getHistoricByUserId: async (req, res) => {
         try {
-            let historic = await Service.findOne({ usuarioId: req.params.userId });
+            let historic = await Service.find({ usuarioId: req.params.userId });
             if (!historic) return res.status(404).json({ error: messages.notFound.historic });
 
             return res.status(200).json(historic);
