@@ -12,12 +12,32 @@ const RestauranteController = {
             return res.status(500).json({ error: messages.serverError });
         }
     },
-    getAll: async (req, res) => {
+    getAllRestaurants: async (req, res) => {
         try {
             let restaurants = await Restaurantes.find({});
             if (!restaurants) return res.status(404).json({ error: messages.empty.restaurants });
 
             return res.status(200).json(restaurants);
+        } catch(err) {
+            return res.status(500).json({ error: messages.serverError });
+        }
+    },
+    getRestaurantById: async (req, res) => {
+        try {
+            let restaurant = await Restaurantes.findById(req.params.id);
+            if (!restaurant) return res.status(404).json({ error: messages.notFound.restaurant });
+
+            return res.status(200).json(restaurant);
+        } catch(err) {
+            return res.status(500).json({ error: messages.serverError });
+        }
+    },
+    utilizeRestaurant: async (req, res) => {
+        try {
+            let restaurant = await Restaurantes.findByIdAndUpdate(req.params.id, { $inc: { utilizacoes: -1 } }, { new: true });
+            if (!restaurant) return res.status(400).json({ error: messages.useRestaurantError });
+
+            return res.status(200).json(restaurant);
         } catch(err) {
             return res.status(500).json({ error: messages.serverError });
         }
