@@ -8,6 +8,8 @@ Para o desafio foi utilizada a arquitetura de microserviços, distribuindo as fu
 
 **API user**, onde é possível criar um novo usuário { method: POST, path: /users/create }, nessa rota será necessário informar um nome de usuário { username } e uma senha de acesso { password }, e também autenticar um usuário e gerar o token { method: POST, path: /autenticar }.
 
+**Com todas as API's, devidamente instaladas e iniciadas, basta acessar *http://localhost:3000/path*, onde o *path* da URL pode ser qualquer um dos citados acima e fazer a requisição. Pode ser usado um software como Postman para testar o funcionamento das rotas.**
+
 ## INSTALAÇÃO
 
 Para ter todas as API's e o gateway funcionando, é necessário instalar as dependências e subir o servidor de cada uma, conectando ao banco de dados, para a instalação siga os passos a seguir:
