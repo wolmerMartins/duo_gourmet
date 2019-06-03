@@ -15,7 +15,7 @@ const restaurantProxy = proxy(process.env.RESTAURANT_URL);
 const serviceProxy = proxy(process.env.SERVICE_URL);
 
 app.post('/users/create', userProxy);
-app.post('/users/auth', userProxy);
+app.post('/autenticar', userProxy);
 
 app.get('/restaurantes', restaurantProxy);
 app.get('/restaurantes/:id', restaurantProxy);

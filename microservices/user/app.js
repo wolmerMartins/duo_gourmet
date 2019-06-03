@@ -8,6 +8,6 @@ require('./config/database');
 
 const usersRoute = require('./repository/users');
 
-app.use('/users', usersRoute);
+app.use('/', usersRoute);
 
 app.listen(app.get('port'));
